@@ -5,8 +5,13 @@ import myClass.*;
 /**
  * LibDB 클래스의 설명을 작성하세요.
  *
+<<<<<<< HEAD
  * @author (2025320015_김홍일, 2022320016_박문아, 2022320001_이승건)
  * @version (버전 번호 또는 작성한 날짜)
+=======
+ * @author (2022320016 박문아, )
+ * @version (2026.10.05)
+>>>>>>> 773f3a016b1da575750522d25304173e13b53d18
  */
 public class LibDB <T>
 {
@@ -57,13 +62,11 @@ public class LibDB <T>
         else if (data instanceof Book) {
             System.out.println("----- 책 목록 출력 -----");
         }
-    
-    Iterator<T> elements = db.iterator();
 
-    while (elements.hasNext()){
-        T element = elements.next();
-        System.out.println(element.toString());
-    }
+        for(T element:db){
+            System.out.println(element.toString());
+        }
+
     }
 }
 

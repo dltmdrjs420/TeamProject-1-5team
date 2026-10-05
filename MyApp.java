@@ -53,7 +53,6 @@ public class MyApp
      * 책DB 또는 이용자DB의 모든 요소를 출력하는 Generic 메소드
      *
      * @param db 출력할 데이터베이스
-     * DB_Element를 상속받은 객체들을 저장하는 LibDB의 모든 요소를 화면에 .
      */
     public static <T extends DB_Element> void printDB(LibDB<T> db)
     {

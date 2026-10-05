@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * MyApp 클래스의 설명을 작성하세요.
  *
- * @author (2022320016 박문아, )
+ * @author (2022320016 박문아,2022320001 이승건)
  * @version (2026.10.05)
  */
 public class MyApp

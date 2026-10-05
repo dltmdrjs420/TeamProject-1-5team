@@ -41,6 +41,7 @@ public class MyApp
         bookDB.addElement(book2);
         bookDB.addElement(book3);
         bookDB.addElement(book4);
+        printDB(bookDB);
         
     }
     /**

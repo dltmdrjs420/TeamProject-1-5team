@@ -3,18 +3,18 @@ import java.util.*;
 import myClass.*;
 
 /**
- * LibDB 클래스의 설명을 작성하세요.
- *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * 제네릭 타입 T를 이용하여 다양한 도서관 데이터(User, Book 등)를 목록 형태로 
+ * 저장하고 관리하는 데이터베이스 클래스
+ * 
+ * @author (2025320015 김홍일, 2022320016 박문아, 2022320001 이승건)
+ * @version (2026.10.05)
  */
-public class LibDB <T>
+public class LibDB <T extends DB_Element>
 {
-    // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
     private ArrayList<T> db;
 
     /**
-     * LibDB 클래스의 객체 생성자
+     * 비어 있는 ArrayList를 생성하여 LibDB 객체를 초기화하는 생성자 
      */
     public LibDB()
     {
@@ -22,48 +22,39 @@ public class LibDB <T>
     }
 
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * 전달받은 데이터 요소를 데이터베이스(리스트)에 추가하는 메소드
+     * 
+     * @param data 데이터베이스에 추가할 요소 객체
      */
     public void addElement(T data)
     {
         db.add(data);
     }
+
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
+     * 고유 식별번호로 요소 검색하는 메소드
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * @param id 찾을 요소의 식별번호 (bookID 또는 stID)
+     * @return 검색된 요소 객체 (일치하는 항목이 없을 경우 null)
      */
-    // public T findElement(String y)
-    // {
-    // // 여기에 코드를 작성하세요.
-    // return "";
-    // }
+    public T findElement(String id)
+    {
+        for (T element : db) {
+            if (element.getID().equals(id)) {
+                return element;
+            }
+        }
+        return null;
+    }
+
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * 데이터베이스에 저장된 모든 요소를 화면에 순서대로 출력하는 메소드
+     * 
      */
     public void printAllElements()
     {
-        T data = db.get(0);
-        if (data instanceof User) {
-            System.out.println("----- 이용자 목록 출력 -----");
+        for(T element:db){
+            System.out.println(element.toString());
         }
-        else if (data instanceof Book) {
-            System.out.println("----- 책 목록 출력 -----");
-        }
-    
-    Iterator<T> elements = db.iterator();
-
-    while (elements.hasNext()){
-        T element = elements.next();
-        System.out.println(element.toString());
-    }
     }
 }
-

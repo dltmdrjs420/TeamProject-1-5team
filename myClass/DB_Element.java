@@ -1,20 +1,19 @@
 package myClass;
 
-
 /**
- * DB_ELement 클래스의 설명을 작성하세요.
- *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * LibDB에 저장되는 모든 요소(Book, User)의 상위 추상클래스
+ * 
+ * @author (2025320015 김홍일, 2022320016 박문아, 2022320001 이승건)
+ * @version (2026.10.05)
  */
 public abstract class DB_Element
 {
 
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * 요소의 고유 식별번호를 문자열로 반환 (Book은 bookID, User는 stID)
+     * 객체의 고유 식별자를 반환하는 추상 메소드
+     *  
+     * @return 하위 클래스에서 각 객체에 맞는 식별자(ID) 문자열반환  
      */
     public abstract String getID();
 }

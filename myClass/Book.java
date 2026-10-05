@@ -1,13 +1,13 @@
 package myClass;
+
 /**
- * Book 클래스의 설명을 작성하세요.
+ * 도서 정보를 관리하는 클래스
  *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * @author (2025320015 김홍일, 2022320016 박문아, 2022320001 이승건)
+ * @version (2026.10.05)
  */
 public class Book extends DB_Element
 {
-    // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
     private String author;
     private String bookID;
     private String publisher;
@@ -15,7 +15,13 @@ public class Book extends DB_Element
     private int year;
 
     /**
-     * Book 클래스의 객체 생성자
+     * 도서의 상세 정보(도서ID, 제목, 저자, 출판사, 출판연도)를 전달받아 Book 객체를 생성하는 constructor
+     * 
+     * @param bookID 도서 식별 번호(ID)
+     * @param title 도서 제목
+     * @param author 도서 저자
+     * @param publisher 출판사
+     * @param year 출판연도
      */
     public Book(String bookID, String title, String author, String publisher, int year)
     {
@@ -27,26 +33,23 @@ public class Book extends DB_Element
     }
 
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * 도서의 식별값(ID)을 문자열 형태로 반환하는 메소드
+     * 
+     * @return 도서의 bookID 문자열
      */
-    @Override
     public String getID()
     {
-        return "";
+        return bookID;
     }
+
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * 도서의 전체 정보를 포맷팅된 문자열 형태로 반환
+     * 
+     * @return (도서ID) 제목, 저자, 출판사, 출판연도 형태의 문자열
      */
     public String toString()
     {
         String bookInfo = "("+bookID+") "+title+", "+author+", "+publisher+", "+year;
         return bookInfo;
     }
-    
 }

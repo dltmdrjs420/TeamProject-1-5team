@@ -15,7 +15,13 @@ public class Book extends DB_Element
     private int year;
 
     /**
-     * Book 클래스의 객체 생성자
+     * 도서의 상세 정보(도서ID, 제목, 저자, 출판사, 출판연도)를 전달받아 Book 객체를 생성합니다.
+     * 
+     * @param bookID 도서 식별 번호(ID)
+     * @param title 도서 제목
+     * @param author 도서 저자
+     * @param publisher 출판사
+     * @param year 출판연도
      */
     public Book(String bookID, String title, String author, String publisher, int year)
     {
@@ -27,10 +33,9 @@ public class Book extends DB_Element
     }
 
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * 도서의 식별값(ID)을 문자열 형태로 반환합니다.
+     * 
+     * @return 도서의 bookID 문자열
      */
     @Override
     public String getID()
@@ -38,10 +43,10 @@ public class Book extends DB_Element
         return "";
     }
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * 도서의 전체 정보를 포맷팅된 문자열 형태로 반환합니다.
+     * 예: (b001) 자바프로그래밍, 홍길동, 선문출판사, 2026
+     * 
+     * @return (도서ID) 제목, 저자, 출판사, 출판연도 형태의 문자열
      */
     public String toString()
     {

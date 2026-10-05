@@ -3,17 +3,17 @@ import java.util.*;
 import myClass.*;
 
 /**
- * DB_ELement 클래스의 설명을 작성하세요.
+ * 제네릭 타입 T를 이용하여 다양한 도서관 데이터(User, Book 등)를 목록 형태로 저장하고 관리하는 데이터베이스 클래스입니다.
  * @author (2025320015_김홍일, 2022320016_박문아, 2022320001_이승건)
  * @version (2026.10.05)
  */
 public class LibDB <T>
 {
-    // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
+    // 데이터를 순차적으로 저장하는 리스트
     private ArrayList<T> db;
 
     /**
-     * LibDB 클래스의 객체 생성자
+     * 비어 있는 ArrayList를 생성하여 LibDB 객체를 초기화합니다.
      */
     public LibDB()
     {
@@ -21,10 +21,9 @@ public class LibDB <T>
     }
 
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * 전달받은 데이터 요소를 데이터베이스(리스트)에 추가합니다.
+     * 
+     * @param data 데이터베이스에 추가할 요소 객체
      */
     public void addElement(T data)
     {
@@ -32,11 +31,19 @@ public class LibDB <T>
     }
     
     /**
+<<<<<<< HEAD
      * 고유 식별번호로 요소 검색
      *
      * @param id 찾을 요소의 식별번호 (bookID 또는 stID)
      * @return 찾은 요소, 없으면 null
+=======
+     * 주어진 식별값(ID)과 일치하는 요소를 데이터베이스에서 검색하여 반환합니다.
+     * 
+     * @param y 검색할 요소의 식별자(ID) 문자열
+     * @return 검색된 요소 객체 (일치하는 항목이 없을 경우 null)
+>>>>>>> fa3a77dad07eaf1a6a0d413b1341a2385de62c41
      */
+<<<<<<< HEAD
     public T findElement(String id)
     {
         for (T element : db) {
@@ -47,11 +54,16 @@ public class LibDB <T>
         return null;
     }
     
+=======
+    // public T findElement(String y)
+    // {
+    //     // 여기에 코드를 작성하세요.
+    //     return "";
+    // }
+>>>>>>> fa3a77dad07eaf1a6a0d413b1341a2385de62c41
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * 데이터베이스에 저장된 모든 요소를 화면에 순서대로 출력합니다.
+     * 첫 번째 요소의 인스턴스 타입(User 또는 Book)에 따라 알맞은 제목 헤더를 출력합니다.
      */
     public void printAllElements()
     {

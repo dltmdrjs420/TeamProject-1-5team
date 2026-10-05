@@ -2,19 +2,20 @@ package myClass;
 
 
 /**
- * User 클래스의 설명을 작성하세요.
- *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * 도서관 이용자 정보를 저장하는 클래스입니다.
+ * @author (2025320015_김홍일, 2022320016_박문아, 2022320001_이승건)
+ * @version (2026.10.05)
  */
 public class User extends DB_Element
 {
-    // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
+    // 이용자의 이름, 학번
     private String name;
     private Integer stID;
 
     /**
-     * User 클래스의 객체 생성자
+     * 학번과 이름을 전달받아 User 객체를 생성합니다.
+     * @param stID 이용자의 학번
+     * @param name 이용자의 이름
      */
     public User(int stID, String name)
     {
@@ -23,10 +24,8 @@ public class User extends DB_Element
     }
 
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * 이용자의 식별값(ID)을 문자열 형태로 반환합니다.
+     * @return    이용자의 ID 문자열
      */
     @Override
     public String getID()
@@ -34,10 +33,9 @@ public class User extends DB_Element
         return "";
     }
      /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * 이용자의 정보를 문자열 형태로 반환합니다.
+     *예: [2022320016] 박문아
+     * @return 이용자의 학번과 이름을 포함한 문자열
      */
     public String toString()
     {

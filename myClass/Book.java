@@ -1,9 +1,9 @@
 package myClass;
 /**
- * Book 클래스의 설명을 작성하세요.
+ * 도서 정보를 관리하는 클래스입니다.
  *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * @author (2025320015_김홍일, 2022320016_박문아, 2022320001_이승건)
+ * @version (2026.10.05)
  */
 public class Book extends DB_Element
 {

@@ -57,13 +57,13 @@ public class LibDB <T>
         else if (data instanceof Book) {
             System.out.println("----- 책 목록 출력 -----");
         }
-    
-    Iterator<T> elements = db.iterator();
 
-    while (elements.hasNext()){
-        T element = elements.next();
-        System.out.println(element.toString());
-    }
+        Iterator<T> elements = db.iterator();
+
+        while (elements.hasNext()){
+            T element = elements.next();
+            System.out.println(element.toString());
+        }
     }
 }
 

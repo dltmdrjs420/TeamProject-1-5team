@@ -11,7 +11,6 @@ import java.util.*;
  */
 public class MyApp
 {
-
     /**
      * main 메소드 - 실행 결과를 출력 하는 메서드 
      *
@@ -44,6 +43,7 @@ public class MyApp
         printDB(bookDB);
         
     }
+    
     /**
      * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
      *

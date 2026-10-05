@@ -3,8 +3,7 @@ package myClass;
 
 /**
  * 도서관 이용자 정보를 저장하는 클래스입니다.
- *
- * @author (2022320016 박문아, )
+ * @author (2025320015_김홍일, 2022320016_박문아, 2022320001_이승건)
  * @version (2026.10.05)
  */
 public class User extends DB_Element

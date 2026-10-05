@@ -12,7 +12,7 @@ public class User extends DB_Element
     private Integer stID;
 
     /**
-     * 학번과 이름을 전달받아 User 객체를 생성하는 메소드
+     * 학번과 이름을 전달받아 User 객체를 생성하는 생성자 
      * 
      * @param stID 이용자의 학번
      * @param name 이용자의 이름
@@ -34,7 +34,7 @@ public class User extends DB_Element
     }
     
      /**
-     * 이용자의 정보를 문자열 형태로 반환
+     * 이용자의 정보를 문자열 형태로 반환하는 메소드 
      *
      * @return 이용자의 학번과 이름을 포함한 문자열
      */

@@ -10,12 +10,8 @@ public abstract class DB_Element
 {
 
     /**
-<<<<<<< HEAD
-     * 요소의 고유 식별번호를 문자열로 반환 (Book은 bookID, User는 stID)
-=======
->>>>>>> fa3a77dad07eaf1a6a0d413b1341a2385de62c41
-     * 
-     * @return 객체의 식별자(ID) 문자열
+     *  객체의 고유 식별자를 반환하는 추상 메서드.
+     * @return 하위 클래스에서 각 객체에 맞는 식별자(ID) 문자열반환  
      */
     public abstract String getID();
 }

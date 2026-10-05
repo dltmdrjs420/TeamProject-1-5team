@@ -3,7 +3,8 @@ import DataBase.LibDB;
 import java.util.*;
 
 /**
- * 사용자(User) 및 도서(Book) 데이터를 생성하여 데이터베이스에 등록하고 대출 현황을 출력하는 MyApp 클래스
+ * 사용자(User) 및 도서(Book) 데이터를 생성하여 
+ * 데이터베이스에 등록하고 대출 현황을 출력하는 MyApp 클래스
  * 
  * @author (2025320015 김홍일, 2022320016 박문아, 2022320001 이승건)
  * @version (2026.10.05)
@@ -60,7 +61,8 @@ public class MyApp
     }
 
     /**
-     * 대출DB의 정보를 "[stID] 이름 ===> (bookID) 책정보" 형식으로 출력하는 메소드
+     * 대출DB의 정보를 "[stID] 이름 ===> (bookID) 책정보" 형식으로 
+     * 출력하는 메소드
      *
      * @param loanDB 대출 데이터베이스
      */
